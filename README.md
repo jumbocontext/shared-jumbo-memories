@@ -1,6 +1,66 @@
 # Shared Jumbo Memories
 A library of pluggable memories for rapidly priming a project with proven invariants, guidelines, and patterns.
 
+## Table of Contents
+- [Memories](#memories)
+- [Contributing](#contributing)
+- [Structure](#structure)
+- [How To Classify](#how-to-classify)
+- [Memory Template](#memory-template)
+
+## Memories
+
+invariants/
+├── architecture/
+│   ├── patterns/
+│   │   ├── [CQRS](invariants/architecture/patterns/cqrs.md)
+│   │   └── [Event Sourcing](invariants/architecture/patterns/event-sourcing.md)
+│   ├── principles/
+│   │   ├── [Common Closure Principle](invariants/architecture/principles/common-closure-principle.md)
+│   │   ├── [Dependency Inversion Principle](invariants/architecture/principles/dependency-inversion-principle.md)
+│   │   ├── [Infrastructure Isolation](invariants/architecture/principles/infrastructure-isolation.md)
+│   │   ├── [Interface Segregation Principle](invariants/architecture/principles/interface-segregation-principle.md)
+│   │   ├── [Liskov Substitution Principle](invariants/architecture/principles/liskov-substitution-principle.md)
+│   │   ├── [Open-Closed Principle](invariants/architecture/principles/open-closed-principle.md)
+│   │   ├── [Infrastructure must be replaceable](invariants/architecture/principles/replaceable-infrastructure.md)
+│   │   └── [Single Responsibility Principle](invariants/architecture/principles/single-responsibility-principle.md)
+│   └── structure/
+│       ├── [Clean Screaming Architecture](invariants/architecture/structure/clean-screaming-architecture.md)
+│       └── [No junk drawers](invariants/architecture/structure/no-junk-drawers.md)
+├── cli/
+│   ├── [JSON output must be exactly one complete payload](invariants/cli/json-output-completeness.md)
+│   ├── [Send all diagnostics and logging to stderr](invariants/cli/stderr-for-diagnostics.md)
+│   └── [Never pollute stdout with non-output content](invariants/cli/stdout-purity.md)
+├── coding/
+│   ├── [Decompose large units of work](invariants/coding/decompose-large-units-of-work.md)
+│   ├── [Names must be explicit and self-documenting](invariants/coding/explicit-naming.md)
+│   └── [No magic strings](invariants/coding/no-magic-strings.md)
+├── data/
+│   ├── [Never modify existing migration files](invariants/data/immutable-migrations.md)
+│   └── [UTF-8 without BOM](invariants/data/utf-8-without-bom.md)
+└── testing/
+    └── [Test file names and namespaces must mirror src/ structure](invariants/testing/symmetric-test-structure.md)
+
+guidelines/
+├── cli/
+│   ├── [Always allow non-interactive use](guidelines/cli/always-allow-non-interactive-use.md)
+│   ├── [Configuration must follow a defined precedence order](guidelines/cli/configuration-precedence.md)
+│   ├── [Confirm before dangerous operations](guidelines/cli/confirm-before-dangerous-operations.md)
+│   ├── [CLI help must be discoverable](guidelines/cli/help-must-be-discoverable.md)
+│   ├── [Never read secrets from flags](guidelines/cli/never-read-secrets-from-flags.md)
+│   └── [Prefer flags over positional arguments](guidelines/cli/prefer-flags-over-args.md)
+├── coding/
+│   ├── [Fail gracefully](guidelines/coding/graceful-failure.md)
+│   └── [Variable names must reflect their source](guidelines/coding/variable-names-reflect-their-source.md)
+├── documentation/
+│   └── [Provide web documentation](guidelines/documentation/provide-web-documentation.md)
+├── process/
+│   ├── [Clean up temporary artifacts](guidelines/process/clean-up-temporary-artifacts.md)
+│   ├── [Explore base classes before implementing derived classes](guidelines/process/explore-base-classes-first.md)
+│   └── [Fix problems when encountered](guidelines/process/fix-problems-when-encountered.md)
+└── testing/
+    └── [Unit test coverage required](guidelines/testing/unit-test-coverage-required.md)
+
 ## Contributing
 Anyone can contribute. Just create a PR.
 
@@ -56,6 +116,3 @@ Reasoning: Clear naming keeps intent obvious without forcing readers to inspect 
 jumbo invariant add --title "Names must be explicit and self-documenting" --description "A reader should understand what a class, file, or identifier does from its name alone—including its architectural role. Never require code inspection to decipher purpose. Examples: AddComponentCommandHandler (not AddComponentHandler), GoalProjectionStore (not GoalStore), SessionStartedEvent (not SessionStarted)."
 ```
 ~~~
-
-## Memories
-Browse by type, then category.
