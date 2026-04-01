@@ -8,5 +8,5 @@ Accept secrets via:
 - A secrets manager or `AF_UNIX` socket
 
 ```bash
-jumbo guideline add --category cli --title "Never read secrets from flags" --description "Do not accept secrets (passwords, tokens, keys) via flags. Flag values leak into ps output and shell history. Instead, accept secrets via a file flag (e.g. --password-file), stdin, or a secrets manager." --rationale "Flag values are visible in ps output and shell history, making them unsafe for secrets. They also encourage storing credentials in plaintext in scripts and shell profiles."
+jumbo guideline add --category cli --title "Never read secrets from flags" --description "Do not accept secrets (passwords, tokens, keys) via flags. Flag values leak into ps output and shell history. Instead, accept secrets via a file flag (e.g. --password-file), stdin, or a secrets manager." --rationale "Flag values are visible in ps output and shell history, making them unsafe for secrets. They also encourage storing credentials in plaintext in scripts and shell profiles." --enforcement "Code review"
 ```
