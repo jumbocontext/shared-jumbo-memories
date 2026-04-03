@@ -20,6 +20,7 @@ A library of pluggable Jumbo memories for rapidly priming a project with proven 
     - [Dependency Inversion Principle](invariants/architecture/principles/dependency-inversion-principle.md)
     - [Infrastructure Isolation](invariants/architecture/principles/infrastructure-isolation.md)
     - [Interface Segregation Principle](invariants/architecture/principles/interface-segregation-principle.md)
+    - [Law of Demeter](invariants/architecture/principles/law-of-demeter.md)
     - [Liskov Substitution Principle](invariants/architecture/principles/liskov-substitution-principle.md)
     - [Open-Closed Principle](invariants/architecture/principles/open-closed-principle.md)
     - [Infrastructure must be replaceable](invariants/architecture/principles/replaceable-infrastructure.md)
@@ -32,8 +33,14 @@ A library of pluggable Jumbo memories for rapidly priming a project with proven 
   - [Send all diagnostics and logging to stderr](invariants/cli/stderr-for-diagnostics.md)
   - [Never pollute stdout with non-output content](invariants/cli/stdout-purity.md)
 - coding
+  - [Avoid deep nesting — prefer early returns and guard clauses](invariants/coding/avoid-deep-nesting.md)
+  - [Leave the code cleaner than you found it (Boy Scout Rule)](invariants/coding/boy-scout-rule.md)
+  - [Comments must explain why, not what](invariants/coding/comments-explain-why.md)
   - [Decompose large units of work](invariants/coding/decompose-large-units-of-work.md)
+  - [Don't Repeat Yourself (DRY)](invariants/coding/dry-no-duplication.md)
   - [Names must be explicit and self-documenting](invariants/coding/explicit-naming.md)
+  - [Limit function argument count](invariants/coding/limit-function-arguments.md)
+  - [No dead code — delete it immediately](invariants/coding/no-dead-code.md)
   - [No magic strings — use type inference where possible, constants where not](invariants/coding/no-magic-strings.md)
 - data
   - [Never modify existing migration files](invariants/data/immutable-migrations.md)
