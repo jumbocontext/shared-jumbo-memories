@@ -11,5 +11,5 @@ Apply configuration from highest to lowest precedence:
 5. System-wide config (least specific)
 
 ```bash
-jumbo guideline add --category other --title "Configuration must follow a defined precedence order" --description "When configuration can come from multiple sources, apply it in this order (highest wins): flags, environment variables, project-level config, user-level config, system-wide config." --rationale "When configuration can come from multiple sources, ambiguity about which one wins leads to confusing, hard-to-debug behaviour. A consistent, published order makes the tool predictable." --enforcement "Code review"
+jumbo guideline add --category other --title "Configuration must follow a defined precedence order" --description "When configuration can come from multiple sources, apply it in this order (highest wins): flags, environment variables, project-level config, user-level config, system-wide config." --rationale "When configuration can come from multiple sources, ambiguity about which one wins leads to confusing, hard-to-debug behaviour. A consistent, published order makes the tool predictable."
 ```
